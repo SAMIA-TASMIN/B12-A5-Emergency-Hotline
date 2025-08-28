@@ -1,0 +1,109 @@
+.inter-font {
+  font-family: "Inter", sans-serif;
+}
+.display-flex{
+    display: flex;
+}
+.nav-gap{
+    gap: 5px;
+}
+nav{
+    height: 100px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 24px 60px;
+    /* border: 1px solid saddlebrown; */
+    /* box-shadow: 0px 1px 50px 0px rgba(181, 181, 181, 0.25);
+    background: var(--White, rgba(255, 255, 255, 1)); */
+}
+
+.nav-container{
+    width: 123px;
+    height: 52px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 12px;
+    border-radius: 50px;
+    background: rgba(65, 255, 107, 0.1);
+
+
+}
+nav img{
+    width: 50px;
+    height: 50px;
+}
+
+h2{
+    color: rgba(0, 103, 71, 1);
+    font-size: 16px;
+    font-weight: 900;
+    margin-top: 0;    
+}
+.left-nav{
+    gap: 20px;
+}
+.left-nav img{
+    width: 30px;
+    height: 30px;
+}
+.left-nav h3{
+    width: 32px;
+    height: 24px;
+    font-size: 16px;
+    font-weight: 900;
+    text-align: center;
+}
+.btn{
+    width: 127px;
+    height: 52px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 36px;
+    border-radius: 50px;
+    background: rgba(0, 166, 62, 1);
+    color:rgba(255, 255, 255, 1);
+    border: none;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.banner{
+    background: linear-gradient(90.00deg, rgba(1.251827359199524, 49.64006805419922, 34.606834411621094, 1),rgba(0, 103, 71, 1) 50%,rgba(1, 50, 35, 1) 100%);
+    padding: 21px 60px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+.banner img{
+    width: 92px;
+    height: 92px;
+    margin: 0 auto;
+}
+.banner h4{
+    color: rgba(255, 255, 255, 1);
+    font-family: Hind Madurai;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.banner p{
+    color: rgba(255, 255, 255, 1);
+    font-family: Hind Madurai;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+.card{
+    background: rgba(65, 255, 107, 0.1);;
+}
+.hide{
+    display: none;
+}
