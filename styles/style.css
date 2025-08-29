@@ -192,7 +192,7 @@ h2{
       gap: 4px;
       padding: 10px;
       justify-content: space-between;
-      align-content: center;
+      align-items: center;
     }
     .buttons button {
       border: none;
@@ -226,7 +226,7 @@ h2{
     .history-header {
       display: flex;
       align-items: center;
-      padding: 12px;
+      padding: 10px;
       justify-content: space-between;
       margin-bottom: 10px;
       margin: 0;
@@ -252,4 +252,18 @@ h2{
       margin: 0;
       font-size: 14px;
     }
+
+@media screen and (max-width:576px) {
+  nav{
+    flex-direction: column;
+    margin: 0;
+  }
+  .banner{
+    margin-top: 25px;
+  }
+  .container{
+    grid-template-columns: 1fr;
+  }
+  
+}    
 
