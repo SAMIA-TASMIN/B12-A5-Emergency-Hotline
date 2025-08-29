@@ -4,6 +4,10 @@
 body{
     margin: 0;
 }
+header{
+  background: gray;
+  color: var(--White, rgba(255, 255, 255, 1));
+}
 .display-flex{
     display: flex;
 }
@@ -97,10 +101,11 @@ h2{
     font-weight: 600;
     margin-top: 10px;
 }
-.card-section{
-    /* background: rgba(65, 255, 107, 0.1); */
+/* .card-section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     background: rgba(245, 255, 246, 1);
-}
+} */
 h5{
     color: var(--Dark, rgba(17, 17, 17, 1));
     font-family: Hind Madurai;
@@ -127,20 +132,19 @@ h6{
     letter-spacing: 0%;
     text-align: left;
 }
-.hide{
-    display: none;
-}
+
 
 .container {
       display: grid;
-      grid-template-columns: 3fr 1fr;
       gap: 20px;
       padding: 20px;
+      background: rgba(245, 255, 246, 1);
+
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
 
@@ -149,54 +153,78 @@ h6{
       border-radius: 12px;
       padding: 16px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      position: relative;
     }
     .card-img{
-        display: flex;
-        justify-content: space-between;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     }
     .card-img img{
-        /* fire-service */
     width: 32px;
     height: 32px;
+    border-radius: 10px;
+    background-color: rgba(255, 227, 226, 1);
+    padding: 10px;
+    margin: 14px;
     }
 
-    .card .heart {
-      position: absolute;
-      top: 12px;
-      left: 12px;
+    .card .heart {     
+      width: 24px;
+      height: 24px;
       cursor: pointer;
-      font-size: 18px;
-      color: #aaa;
+      color: Gray;
+      
     }
 
     .card h3 {
       margin: 0;
-      font-size: 18px;
-      color: #333;
+      font-size: 24px;
+      font-weight: bold;
     }
     .card p {
+      /* National Emergency */
+      width: 372.67px;
+      height: 21px;
       margin: 5px 0;
-      font-size: 14px;
-      color: #555;
+      color: var(--Gray, rgba(92, 92, 92, 1));
+      font-family: Roboto;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 100%;
+      text-align: left;
     }
     .number {
-      font-size: 20px;
-      font-weight: bold;
-      margin: 10px 0;
+      /* 999 */
+      width: 372.67px;
+      height: 38px;
+      color: var(--Dark, rgba(17, 17, 17, 1));
+      font-family: Roboto;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 100%;
+      text-align: left;
+
     }
     .badge {
-      display: inline-block;
-      background: #e5f8ef;
-      padding: 2px 8px;
-      font-size: 12px;
-      border-radius: 6px;
-      color: #0a8147;
-      margin-bottom: 10px;
+      width: 80px;
+      height: 25px;
+      padding: 6px;
+      color: var(--Gray, rgba(92, 92, 92, 1));
+      background: var(--Gray-Light, rgba(242, 242, 242, 1));
+      font-size: 18px;
+      font-family: Li Ador Noirrit;
+      font-weight: 400;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15);
     }
     .buttons {
+      /* Button */
+      height: 40px;
+      width: 182.33px;
       display: flex;
+      align-items: center;
+      padding: 16px;
       justify-content: space-between;
     }
     .buttons button {
@@ -207,7 +235,12 @@ h6{
       font-size: 14px;
     }
     .copy {
-      background: #eee;
+      box-sizing: border-box;
+      border: 1px solid var(--Stroke, rgba(212, 214, 213, 1));
+      border-radius: 8px;
+      background: var(--White, rgba(255, 255, 255, 1));
+      box-sizing: border-box;
+      box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15);
     }
     .call {
       background: #06a94d;
@@ -216,26 +249,33 @@ h6{
 
     /* History */
     .history {
-      background: #fff;
-      border-radius: 12px;
       padding: 16px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15);
+      background: var(--White, rgba(255, 255, 255, 1));
     }
     .history-header {
+      /* History */
       display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 24px;
       justify-content: space-between;
-      align-items: center;
       margin-bottom: 10px;
     }
     .history-header h3 {
       margin: 0;
     }
     .clear-btn {
-      background: red;
-      color: white;
-      padding: 5px 10px;
+      width: 114px;
+      height: 52px;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 36px 12px 36px;
+      border-radius: 50px;
+      background: rgba(0, 166, 62, 1);
       border: none;
-      border-radius: 6px;
+      color: rgba(255, 255, 255, 1);
       cursor: pointer;
     }
     .history ul {
