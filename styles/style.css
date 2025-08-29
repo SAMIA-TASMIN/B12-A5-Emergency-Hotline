@@ -1,6 +1,9 @@
 .inter-font {
   font-family: "Inter", sans-serif;
 }
+body{
+    margin: 0;
+}
 .display-flex{
     display: flex;
 }
@@ -75,35 +78,173 @@ h2{
 .banner{
     background: linear-gradient(90.00deg, rgba(1.251827359199524, 49.64006805419922, 34.606834411621094, 1),rgba(0, 103, 71, 1) 50%,rgba(1, 50, 35, 1) 100%);
     padding: 21px 60px;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
+    text-align: center;
+    color: white;
 }
 .banner img{
     width: 92px;
     height: 92px;
-    margin: 0 auto;
 }
 .banner h4{
-    color: rgba(255, 255, 255, 1);
     font-family: Hind Madurai;
     font-size: 40px;
     font-weight: 700;
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
 }
 .banner p{
-    color: rgba(255, 255, 255, 1);
     font-family: Hind Madurai;
     font-size: 20px;
     font-weight: 600;
-    text-align: center;
+    margin-top: 10px;
 }
-.card{
-    background: rgba(65, 255, 107, 0.1);;
+.card-section{
+    /* background: rgba(65, 255, 107, 0.1); */
+    background: rgba(245, 255, 246, 1);
+}
+h5{
+    color: var(--Dark, rgba(17, 17, 17, 1));
+    font-family: Hind Madurai;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: left;
+}
+.card p{
+    color: var(--Gray, rgba(92, 92, 92, 1));
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+h6{
+    color: var(--Gray, rgba(92, 92, 92, 1));
+    font-family: Hind Madurai;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
 }
 .hide{
     display: none;
 }
+
+.container {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    .card-img{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .card-img img{
+        /* fire-service */
+    width: 32px;
+    height: 32px;
+    }
+
+    .card .heart {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      cursor: pointer;
+      font-size: 18px;
+      color: #aaa;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #333;
+    }
+    .card p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #555;
+    }
+    .number {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-block;
+      background: #e5f8ef;
+      padding: 2px 8px;
+      font-size: 12px;
+      border-radius: 6px;
+      color: #0a8147;
+      margin-bottom: 10px;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+    .buttons button {
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .copy {
+      background: #eee;
+    }
+    .call {
+      background: #06a94d;
+      color: white;
+    }
+
+    /* History */
+    .history {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .history-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .history-header h3 {
+      margin: 0;
+    }
+    .clear-btn {
+      background: red;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .history ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+    }
+    .history ul li {
+      border-bottom: 1px solid #eee;
+      padding: 8px 0;
+    }

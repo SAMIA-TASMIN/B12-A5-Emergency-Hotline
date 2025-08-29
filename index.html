@@ -17,15 +17,16 @@
             <h2>Emergency <br> Service</h2>
         </div>
         <div class="left-nav display-flex">
-            <div class="display-flex nav-container">                
-                <h3>0</h3>
+            <div class="display-flex nav-container">
+                <span id="heartCount"><h3>0</h3></span>                   
                 <img src="./assets/heart.png" alt="">
             </div>
             <div class="display-flex nav-container">
-                    <h3>100</h3>                    
+                <span id="coinCount"><h3>100</h3></span>                    
                     <img src="./assets/coin.png" alt="">
             </div>
-                <button class="btn"><h3>2</h3>Copy</button>
+            <button class="btn">
+                <span id="copyCount"><h3>2</h3></span>Copy</button>
         </div>
     </nav>
     <section class="banner">
@@ -33,17 +34,167 @@
             <h4>Emergency Service Directory</h4>
             <p>Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
     </section>
-    <section class="card">
-        
+    <section class="card-section">
+        <div class="container">
+  <!-- Cards -->
+  <div class="cards">
+    <div class="card">
+      <div class="card-img">
+        <img src="./assets/emergency.png" alt="">
+        <span class="heart"><i class="fa-regular fa-heart"></i></span>
+      </div>
+      <h5>National Emergency Number</h5>
+      <p>National Emergency</p>
+      <div class="badge">All</div>
+      <div class="number">999</div>
+      <div class="buttons">
+        <button class="copy"><i class="fa-solid fa-copy"></i> Copy</button>
+        <button class="call"><i class="fa-solid fa-phone-volume"></i> Call</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="heart"><i class="fa-regular fa-heart"></i></span>
+      <h>Ambulance Service</h5>
+      <p>Ambulance</p>
+      <div class="badge">Health</div>
+      <div class="number">1994-999999</div>
+      <div class="buttons">
+        <button class="copy"><i class="fa-solid fa-copy"></i> Copy</button>
+        <button class="call"><i class="fa-solid fa-phone-volume"></i> Call</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="heart"><i class="fa-regular fa-heart"></i></span>
+      <h3>Women & Child Helpline</h3>
+      <p>Women & Child</p>
+      <div class="badge">Help</div>
+      <div class="number">109</div>
+      <div class="buttons">
+        <button class="copy"><i class="fa-solid fa-copy"></i> Copy</button>
+        <button class="call"><i class="fa-solid fa-phone-volume"></i> Call</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="heart"><i class="fa-regular fa-heart"></i></span>
+      <h3>Anti-Corruption Helpline</h3>
+      <p>Anti-Corruption</p>
+      <div class="badge">Govt</div>
+      <div class="number">106</div>
+      <div class="buttons">
+        <button class="copy"><i class="fa-solid fa-copy"></i> Copy</button>
+        <button class="call"><i class="fa-solid fa-phone-volume"></i> Call</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="heart"><i class="fa-regular fa-heart"></i></span>
+      <h3>Electricity Helpline</h3>
+      <p>Electricity Outage</p>
+      <div class="badge">Electricity</div>
+      <div class="number">16216</div>
+      <div class="buttons">
+        <button class="copy"><i class="fa-solid fa-copy"></i> Copy</button>
+        <button class="call"><i class="fa-solid fa-phone-volume"></i> Call</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="heart"><i class="fa-regular fa-heart"></i></span>
+      <h3>Bangladesh Railway Helpline</h3>
+      <p>Railway</p>
+      <div class="badge">Travel</div>
+      <div class="number">163</div>
+      <div class="buttons">
+        <button class="copy"><i class="fa-solid fa-copy"></i> Copy</button>
+        <button class="call"><i class="fa-solid fa-phone-volume"></i> Call</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- History -->
+  <div class="history">
+    <div class="history-header">
+      <h3>📞 Call History</h3>
+      <button class="clear-btn">Clear</button>
+    </div>
+    <ul id="historyList"></ul>
+  </div>
+    </div>
     </section>
-    <div class="hide">
+    <div class="">
         <i class="fa-solid fa-copy"></i>
-        <i class="fa-solid fa-heart"></i>
-        <i class="fa-light fa-heart"></i>
+        <!-- <i class="fa-solid fa-heart"></i> -->
+        <!-- <i class="fa-light fa-heart"></i> -->
         <i class="fa-regular fa-heart"></i>
         <i class="fa-solid fa-phone-volume"></i>
         <i class="fa-solid fa-clock-rotate-left"></i>
         <i class="fa-solid fa-star"></i>
     </div>
+
+<script>
+  let heartCount = 0;
+  let coinCount = 100;
+  let copyCount = 0;
+
+  const heartCountEl = document.getElementById("heartCount");
+  const coinCountEl = document.getElementById("coinCount");
+  const copyCountEl = document.getElementById("copyCount");
+  const historyList = document.getElementById("historyList");
+
+  // Heart click
+  document.querySelectorAll(".heart").forEach(heart=>{
+    heart.addEventListener("click",()=>{
+      heartCount++;
+      heartCountEl.textContent = heartCount;
+      heart.textContent = "❤️";
+    });
+  });
+
+  // Copy click
+  document.querySelectorAll(".copy").forEach(btn=>{
+    btn.addEventListener("click",(e)=>{
+      const card = e.target.closest(".card");
+      const number = card.querySelector(".number").textContent;
+      navigator.clipboard.writeText(number);
+      alert("Copied: "+number);
+      copyCount++;
+      copyCountEl.textContent = copyCount;
+    });
+  });
+
+  // Call click
+  document.querySelectorAll(".call").forEach(btn=>{
+    btn.addEventListener("click",(e)=>{
+      const card = e.target.closest(".card");
+      const name = card.querySelector("h3").textContent;
+      const number = card.querySelector(".number").textContent;
+
+      if(coinCount < 20){
+        alert("Not enough coins!");
+        return;
+      }
+
+      coinCount -= 20;
+      coinCountEl.textContent = coinCount;
+
+      alert("Calling "+name+" ("+number+") ...");
+
+      // Add history with time
+      const now = new Date();
+      const time = now.toLocaleTimeString();
+      const li = document.createElement("li");
+      li.textContent = `${name} - ${number} at ${time}`;
+      historyList.appendChild(li);
+    });
+  });
+
+  // Clear history
+  document.querySelector(".clear-btn").addEventListener("click",()=>{
+    historyList.innerHTML = "";
+  });
+</script>    
 </body>
 </html>
